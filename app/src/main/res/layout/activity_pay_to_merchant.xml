@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="@string/app_name"
+        app:hintTextAppearance="@style/TextInputLayoutHintAppearance">
+
+        <com.google.android.material.textfield.TextInputEditText
+            style="@style/payment_to_merchant_text_box_items"
+            android:inputType="number"
+            android:theme="@style/TextInputTheme" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <SurfaceView
+        android:id="@+id/mSvCameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/inputNumber"/>
+
+    <com.bynq.wallet.utility.ScannerOverlay
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/inputNumber"
+        android:background="#44000000"
+        app:line_color="#7323DC"
+        app:line_speed="6"
+        app:line_width="4"
+        app:square_height="200"
+        app:square_width="200">
+
+    </com.bynq.wallet.utility.ScannerOverlay>
+
+</RelativeLayout>
